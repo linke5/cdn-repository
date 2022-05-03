@@ -115,5 +115,3 @@ Nodes:
           ALICLOUD_SECRET_KEY: bbb
           EOF
 XrayR restart
-
-echo "请忽略上句红色的字"
