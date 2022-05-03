@@ -6,19 +6,19 @@ echo " \ Old Renewed By Surplus|New Renewed By Ling / "
 echo " ========================================================= "
 
 rm -rf /etc/systemd/system/XrayR.service
-wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/lilicloud/XrayR.service
+wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/XrayR/XrayR.service
 mv XrayR.service /etc/systemd/system
 systemctl daemon-reload
 
 rm -rf /etc/XrayR/config.yml
-wget https://fastly.jsdelivr.net/gh/linke5/cdn-repository/lilicloud/config.yml
+wget https://fastly.jsdelivr.net/gh/linke5/cdn-repository/XrayR/config.yml
 mv config.yml /etc/XrayR/
 
 rm -rf /etc/XrayR/cert
 mkdir /etc/XrayR/cert
-wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/ssl/licom-ga/fullchain.crt
+wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/ssl/licom.ga/fullchain.crt
 mv fullchain.crt /etc/XrayR/cert
-wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/ssl/licom-ga/private.pem
+wget https://cdn.jsdelivr.net/gh/linke5/cdn-repository/ssl/licom.ga/private.pem
 mv private.pem /etc/XrayR/cert
 
 read -p "节点idtr:" idtr
@@ -115,3 +115,5 @@ Nodes:
           ALICLOUD_SECRET_KEY: bbb
           EOF
 XrayR restart
+
+echo "请忽略上句红色的字"
